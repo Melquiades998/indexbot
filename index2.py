@@ -33,7 +33,7 @@ def main() -> None:
     app.add_handler(MessageHandler(filters.Text(), echo))
 
     # Run app
-    app.run_polling()
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 if __name__ == "__main__":
     asyncio.run(main())
